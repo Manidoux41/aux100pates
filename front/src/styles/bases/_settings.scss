@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@use '../abstracts/' as *;
 
 * {
     margin: 0;
