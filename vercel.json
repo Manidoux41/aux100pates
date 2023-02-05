@@ -1,20 +1,24 @@
 {
-  "version": 2,
+  "regions": ["iad1"],
   "builds": [
+    { "src": "back/server.js", "use": "@now/node" },
     {
-      "src": "./back/server.js",  // path to your server.js file
-      "use": "@vercel/node"
-    },
-    {
-      "src": "./front/build",    // path to your build folder
-      "use": "@vercel/static"
+      "src": "front/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
     }
   ],
-
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/back/server.js"
-    }
+      "src": "/back/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "back/server.js"
+    },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "s-maxage=31536000, immutable" },
+      "dest": "front/static/$1"
+    },
+    { "src": "/(.*)", "dest": "front/index.html" }
   ]
 }
