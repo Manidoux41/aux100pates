@@ -20,10 +20,17 @@
             border-radius: 10px;
             .menu-content {
                 position: absolute;
-                inset: 25px;
+                inset: 25px 55px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 25px;
+                ul{
+                    align-self: flex-start;
+                    list-style: none;
+                    line-height: 25px;
+                }
+                h2 { text-align: center;}
             }
         }
         
