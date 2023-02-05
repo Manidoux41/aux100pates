@@ -1,0 +1,27 @@
+/back/node_modules
+/back/.env
+/back/images/*
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/front//node_modules
+/front//.pnp
+/front/.pnp.js
+
+/front/# testing
+/front//coverage
+
+/front/# production
+/front//build
+
+/front/# misc
+/front/.DS_Store
+/front/.env.local
+/front/.env.development.local
+/front/.env.test.local
+/front/.env.production.local
+
+/front/npm-debug.log*
+/front/yarn-debug.log*
+/front/yarn-error.log*
