@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.menu-board {
+    width: 580px;
+    height: 900px;
+    overflow: hidden;
+    background-image: url(../../assets/images/blackboard.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    .menu-container {
+        position: absolute;
+        color: #fff;
+        inset: 10px;
+        font-family: $scriptPolice;
+    }
+}
