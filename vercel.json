@@ -1,8 +1,5 @@
 {
   "regions": ["iad1"],
-  "env": {
-    "MONGO_URL": "@mern_template_db_url"
-  },
   "builds": [
     { "src": "back/server.js", "use": "@now/node" },
     {
