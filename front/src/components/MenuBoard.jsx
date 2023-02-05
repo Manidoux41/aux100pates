@@ -1,13 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const MenuBoard = () => {
   return (
-    <div className='menu-board'>
-        <div className="menu-container">
-            <h1 className='text-center display-2'>Nos menus</h1>
-        </div>
-    </div>
-  )
-}
+    <>
+      <div className="menu-container">
+        <div className="menu-board">
+          <div className="menu-content">
+            <h1>Nos menus</h1>
 
-export default MenuBoard
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default MenuBoard;
