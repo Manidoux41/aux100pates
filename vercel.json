@@ -1,5 +1,8 @@
 {
   "regions": ["iad1"],
+  "env": {
+    "MONGO_URL": "@mern_template_db_url"
+  },
   "builds": [
     { "src": "back/server.js", "use": "@now/node" },
     {
@@ -10,7 +13,7 @@
   ],
   "routes": [
     {
-      "src": "/back/(.*)",
+      "src": "/api/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
       "dest": "back/server.js"
     },
@@ -19,6 +22,8 @@
       "headers": { "cache-control": "s-maxage=31536000, immutable" },
       "dest": "front/static/$1"
     },
+    { "src": "/favicon.ico", "dest": "front/favicon.ico" },
+    
     { "src": "/(.*)", "dest": "front/index.html" }
   ]
 }
