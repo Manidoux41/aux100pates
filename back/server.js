@@ -10,11 +10,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/", menuRouter);
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "../front/build")));
 
 app.get("*", function(_, res) {
     res.sendFile(
-        path.join(__dirname, "../frontend/build/index.html"),
+        path.join(__dirname, "../front/build/index.html"),
         function (err) {
             if(err) {
                 res.status(500).send(err)
