@@ -10,7 +10,7 @@
   ],
   "routes": [
     {
-      "src": "/back/(.*)",
+      "src": "/api/(.*)",
       "headers": { "cache-control": "s-maxage=0" },
       "dest": "back/server.js"
     },
