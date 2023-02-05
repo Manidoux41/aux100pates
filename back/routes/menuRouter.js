@@ -3,6 +3,6 @@ const { getMenu } = require("../controllers/menusController");
 
 const menuRouter = Router();
 
-menuRouter.get("/v1/menus", getMenu);
+menuRouter.get("/v2/menus", getMenu);
 
 module.exports = menuRouter;
