@@ -1,0 +1,48 @@
+@use '../abstracts/' as *;
+
+article {
+    grid-column: 6 / 13;
+    position: relative;
+    
+    @media screen and (max-width:768px) {
+        order: 2;
+    }
+     
+        .content-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange;
+        height: 650px;
+        width:650px; 
+        height:auto;
+        padding: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        cursor: pointer;
+           h2 {
+            color: #333;
+           }
+           p {
+            color: #fff;
+            line-height: 45px;
+           }
+        }
+    .content-image  {
+            width:650px;
+            height: 650px;
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate3d(1, 1, 1,-360deg);
+            transition: transform 1s;
+            padding: 10px;
+            
+        }
+
+    }
+.rotate-out {
+  transform: rotateY(360deg);
+}
