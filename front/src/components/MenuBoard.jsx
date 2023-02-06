@@ -7,7 +7,7 @@ const MenuBoard = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 3000);
   }, []);
 
   return (
