@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const MenuBoard = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 1000);
+  }, []);
+
   return (
     <>
-      <div className="menu-container">
+      <div className={`menu-container ${isVisible ? 'visible' : ''}`}>
         <div className="menu-board">
           <div className="menu-content">
             <h1>Nos menus</h1>
@@ -14,7 +23,7 @@ const MenuBoard = () => {
               <li>Végétarienne...</li>
               <li></li>
             </ul>
-            <h2>Le reste des menus seront intégré directement via la backend de l'application...</h2>
+            <h2>Le reste des menus seront intégrés directement via la backend de l'application...</h2>
           </div>
         </div>
       </div>
