@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../assets/images/LogoACP.png'
 import MenuBoard from '../components/MenuBoard'
 
 const Home = () => {
  
   return (
     <div className='home'>
-        <h1>Home</h1>
+        <img src={logo} alt="logo aux cent pâtes" />
         <MenuBoard />
     </div>
   )
