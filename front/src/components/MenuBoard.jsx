@@ -8,14 +8,14 @@ const MenuBoard = () => {
     window.addEventListener('load', () => {
       setTimeout(() => {
         setIsVisible(true);
-      }, 50);
+      }, 1500);
     });
 
     return () => {
       window.removeEventListener('load', () => {
         setTimeout(() => {
           setIsVisible(true);
-        }, 50);
+        }, 1500);
       });
     };
   }, []);
