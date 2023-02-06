@@ -5,9 +5,15 @@ const MenuBoard = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
+    window.addEventListener('load', () => {
       setIsVisible(true);
-    }, 3000);
+    });
+
+    return () => {
+      window.removeEventListener('load', () => {
+        setIsVisible(true);
+      });
+    };
   }, []);
 
   return (
