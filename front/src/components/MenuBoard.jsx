@@ -6,12 +6,16 @@ const MenuBoard = () => {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      setIsVisible(true);
+      setTimeout(() => {
+        setIsVisible(true);
+      }, 50);
     });
 
     return () => {
       window.removeEventListener('load', () => {
-        setIsVisible(true);
+        setTimeout(() => {
+          setIsVisible(true);
+        }, 50);
       });
     };
   }, []);
