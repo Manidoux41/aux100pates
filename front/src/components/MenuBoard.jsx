@@ -15,7 +15,7 @@ const MenuBoard = () => {
       window.removeEventListener('load', () => {
         setTimeout(() => {
           setIsVisible(true);
-        }, 1500);
+        }, 5000);
       });
     };
   }, []);

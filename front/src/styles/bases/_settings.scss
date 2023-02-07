@@ -6,9 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .App{
-    max-width: 1400px;
-    margin: 40px auto;
+    max-width: 100%;
     font-family: sans-serif;
     @media screen and (max-width: 768px) {
         margin: 15px;
